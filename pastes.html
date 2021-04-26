@@ -1,41 +1,32 @@
 <html>
 <head>
-    <meta http-equiv="refresh" content="120; URL=https://ayovenue.github.io" />
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <meta http-equiv="X-UA-Compatible" content="ie=edge">
-          <title>Venue - PASTES</title>
-          <link rel="stylesheet" href="style.css"> 
-          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
-          <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Pacifico|Cardo" rel="stylesheet" type="text/css">
-          <script src="./script.js" defer></script>
-    </head>
-	<audio id="music" src="./Images&Music/music2.mp3" autoplay="true"></audio>
-	<script>var audio=document.getElementById("music");audio.volume=0.3;</script>
-    <body onload="titleMarquee()">
-      <div class="container">
-              <nav class="navbar">
-              <div class="brand-title unselectable">PASTES</div> 
-                  <a href="#" class="toggle-button">
-                      <span class="bar"></span>
-                      <span class="bar"></span>
-                      <span class="bar"></span>
-                      <span class="bar"></span>
-                  </a>
-                  <div class="navbar-links">
-                      <ul>
-                          <li><a class="unselectable" href="https://ayovenue.github.io">Home</a></li>
-                          <li><a class="active unselectable" href="pastes.html">Pastes</a></li>
-                          <li><a class="unselectable" href="ads.html">Advertise</a></li>
-                          <li><a class="unselectable" href="discord.html">Discord</a></li>
-                      </ul>
-          
-                  </div>
-              </nav>
-          </div>
-    
+    <title>Color Scheme Toggle</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-    
-    </body>
-    </html>
-    
+    <meta name="description" content="A simple javascript to toggle your website between [ 🖥 system theme | 🌙 dark mode | ☀️ light mode ]">
+    <meta name="author" content="Avinash Joshi">
+    <meta name="keywords" content="dark-mode-toggle, light-mode-toggle, color-scheme-toggle">
+
+    <link rel="stylesheet" href="color-scheme-toggle.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h3 class="title">Color Scheme Toggle</h3>
+            <ul class="nav">
+                <li><a href="https://github.com/avinashjoshi/color-scheme-toggle">Github</a></li>
+            </ul>
+        </header>
+
+        <div class="content">
+            <h2>Click/tap the button below to toggle between system default, dark mode, and light mode</h2>
+            <button class="color-scheme" id="color-scheme-toggle"></button>
+        </div>
+
+        <footer>
+            <div>Made with &#9829; by <a href="https://a10i.me">Avinash Joshi</a></div>
+        </footer>
+    </div>
+    <script src="color-scheme-toggle.js"></script>
+</body>
+</html>
