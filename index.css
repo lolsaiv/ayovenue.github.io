@@ -559,6 +559,21 @@ body {
 }
 
 
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 24px;
+}
+
+.switch input {display:none;}
+
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(55px);
+}
 
 /*------ ADDED CSS ---------*/
 .slider:after
