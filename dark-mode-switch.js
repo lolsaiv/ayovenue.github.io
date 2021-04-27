@@ -1,45 +1,46 @@
-// Selecting all the required classes from HTML to change 
-var body = document.body
-var check = document.querySelector('#check')
-var box = document.querySelector('.box')
-var ball = document.querySelector('.ball')
-
-// Adding an eventListener function to change color everytime var check is changed.(checked & unchecked)
-
-check.addEventListener('change',function(){
-
-  //   conditions to apply when checkbox is checked
-
-  if(this.checked == true){
-    box.setAttribute('style','background-color:white;')
-    ball.setAttribute('style','transform:translatex(100%);')
-    body.setAttribute('style','background-color:black; color:white;') 
-
-
-
-
-    // Targeting my social media links********************
-    youtube.setAttribute('style','border:2px solid white;')
-    instagram.setAttribute('style','border:2px solid white;')
-    // *******************************
-
+ar; darkSwitch = document.getElementById("darkSwitch");
+window.addEventListener("load", function () {
+  if (darkSwitch) {
+    initTheme();
+    darkSwitch.addEventListener("change", function () {
+      resetTheme();
+    });
   }
+});
 
-  //   conditions to apply when checkbox is unchecked
+/**
+ * Summary: function that adds or removes the attribute 'data-theme' depending if
+ * the switch is 'on' or 'off'.
+ *
+ * Description: initTheme is a function that uses localStorage from JavaScript DOM,
+ * to store the value of the HTML switch. If the switch was already switched to
+ * 'on' it will set an HTML attribute to the body named: 'data-theme' to a 'dark'
+ * value. If it is the first time opening the page, or if the switch was off the
+ * 'data-theme' attribute will not be set.
+ * @return {void}
+ */
+function initTheme() {
+  var darkThemeSelected =
+    localStorage.getItem("darkSwitch") !== null &&
+    localStorage.getItem("darkSwitch") === "dark";
+  darkSwitch.checked = darkThemeSelected;
+  darkThemeSelected
+    ? document.body.setAttribute("data-theme", "dark")
+    : document.body.removeAttribute("data-theme");
+}
 
-  if(this.checked == false){
-    box.setAttribute('style','background-color:black; color:white;')
-    ball.setAttribute('style','transform:translatex(0%);')
-    body.setAttribute('style','background-color:white; color:black;')
-
-
-
-
-    // Targeting my social media links********************
-    youtube.setAttribute('style','border:2px solid black; color:black;')
-    instagram.setAttribute('style','border:2px solid black;')
-    // *******************************
-
-
+/**
+ * Summary: resetTheme checks if the switch is 'on' or 'off' and if it is toggled
+ * on it will set the HTML attribute 'data-theme' to dark so the dark-theme CSS is
+ * applied.
+ * @return {void}
+ */
+function resetTheme() {
+  if (darkSwitch.checked) {
+    document.body.setAttribute("data-theme", "dark");
+    localStorage.setItem("darkSwitch", "dark");
+  } else {
+    document.body.removeAttribute("data-theme");
+    localStorage.removeItem("darkSwitch");
   }
-})
+}
