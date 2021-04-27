@@ -9,6 +9,7 @@
 
 [data-theme="dark"] .bg-white {
   background-color: #000 !important;
+  background-color: #0a0a0a
 }
 
 [data-theme="dark"] .bg-black {
