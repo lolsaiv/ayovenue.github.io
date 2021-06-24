@@ -21,9 +21,12 @@
 <!--AUDIO-->
 
 <div id="player">
-    <audio controls autoplay hidden>
-     <source src="assets/img/audio.mp3" type="audio/mpeg">
+    <audio controls autoplay hidden id="audio">
+		<source src="assets/img/audio.mp3" type="audio/mpeg">
     </audio>
+	<script>
+		var audio = document.getElementById("audio").volume = 0.2;
+	</script>
 </div>
 
     <!--PAGE-->
@@ -83,7 +86,7 @@
                 </section>
                 <section>
                     <div class="skill">
-                        <h4>Updated</h4>
+                        <h4>Update Progress</h4>
                         <aside>60%</aside>
                         <figure class="bar">
                             <div class="bar-active width-60"></div>
